@@ -11,13 +11,10 @@
         <input type="submit" value="Search">
     </form>
     <?php
-        echo "<h2>Vehicle Information 1</h2>";
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         require_once('./model/vehiclelistings.php');
-        echo "<h2>Vehicle Information 2</h2>";
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            echo "<h2>Vehicle Information 3</h2>";
             $vin = $_POST['vin'];
 
             // Validate the VIN (you can add more validation)
