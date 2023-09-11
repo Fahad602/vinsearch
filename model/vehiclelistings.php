@@ -2,10 +2,10 @@
 
 class VehicleListings {
     private $conn;
-    private const DB_HOST = 'localhost'; 
-    private const DB_USER = 'fahad';
-    private const DB_PASS = 'SgYBUZ7Gqe2LQw'; // 
-    private const DB_NAME = 'test';
+    const DB_HOST = 'localhost'; 
+    const DB_USER = 'fahad';
+    const DB_PASS = 'SgYBUZ7Gqe2LQw'; // 
+    const DB_NAME = 'test';
     public function __construct() {
         try {
             $this->conn = new PDO(
