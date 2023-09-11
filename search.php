@@ -1,5 +1,5 @@
 <?php
-require_once('../model/Database.php');
+require_once('../model/vehiclelistings.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
@@ -17,8 +17,6 @@ ini_set('display_errors', 1);
         <input type="submit" value="Search">
     </form>
     <?php
-        require_once('./model/vehiclelistings.php');
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $vin = $_POST['vin'];
 
