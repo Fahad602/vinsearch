@@ -1,15 +1,17 @@
 <?php
-require_once('../config/config.php');
 
 class VehicleListings {
     private $conn;
-
+    private const DB_HOST = 'localhost'; 
+    private const DB_USER = 'fahad';
+    private const DB_PASS = 'SgYBUZ7Gqe2LQw'; // 
+    private const DB_NAME = 'test';
     public function __construct() {
         try {
             $this->conn = new PDO(
-                "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME,
-                DB_USERNAME,
-                DB_PASSWORD
+                "mysql:host=" . self::DB_HOST . ";dbname=" . self::DB_NAME,
+                self::DB_USER,
+                self::DB_PASS
             );
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
