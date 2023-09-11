@@ -1,7 +1,3 @@
-<?php
-require_once('./model/vehiclelistings.php');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +11,7 @@ require_once('./model/vehiclelistings.php');
         <input type="submit" value="Search">
     </form>
     <?php
+        require_once('./model/vehiclelistings.php');
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $vin = $_POST['vin'];
 
